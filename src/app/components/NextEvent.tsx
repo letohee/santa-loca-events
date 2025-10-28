@@ -29,7 +29,7 @@ export default function NextEvent() {
 
           <div className="relative overflow-hidden rounded-2xl border border-white/10">
             <Image
-              src="/next-poster.jpg"
+              src="/events-banner.jpg"
               alt="Event poster"
               width={1200}
               height={800}
