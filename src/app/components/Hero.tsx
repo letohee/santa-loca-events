@@ -14,7 +14,7 @@ export default function Hero() {
         muted
         loop
         playsInline
-        poster="/hero-poster.jpg"
+        poster="/merch2.jpg"
         src="/hero.mp4"
       />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,42,42,0.2),transparent_50%)]" />
