@@ -17,4 +17,5 @@ export const SOCIALS = {
 };
 
 // TEMP next event (update later)
-export const NEXT_EVENT_DATE = new Date(Date.now() + 1000 * 60 * 60 * 24 * 14).toISOString();
+export const NEXT_EVENT_DATE = "2025-11-15T22:00:00+00:00"; // <- update
+  

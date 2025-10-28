@@ -26,7 +26,7 @@ export default function MerchCTA() {
         </div>
         <div className="relative overflow-hidden rounded-2xl border border-white/10">
           <Image
-            src="/merch.jpg"
+            src="/merch.JPG"
             alt="Merch preview"
             width={1200}
             height={800}

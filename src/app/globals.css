@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-eagle: system-ui;
+  --font-sprintura: system-ui;
 }
+h1,h2,h3 { font-family: var(--font-eagle), ui-sans-serif, system-ui; }
+.brand-script { font-family: var(--font-sprintura), ui-sans-serif, system-ui; }
+.font-script { font-family: var(--font-xirod), ui-sans-serif, system-ui; }
+
 
 @theme inline {
   --color-background: var(--background);
