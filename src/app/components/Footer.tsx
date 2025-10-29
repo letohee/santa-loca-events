@@ -1,13 +1,27 @@
 "use client";
 
 import { Instagram, MessageCircle, ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
 
 const BRAND_NAME = "Santa Loca Events";
 
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-white/10 text-gray-300">
-      <div className="max-w-7xl mx-auto px-6 py-10 grid gap-10 md:grid-cols-3">
+    <footer className="relative overflow-hidden bg-black border-t border-white/10 text-gray-300">
+      {/* Pulsing disco glow (behind content) */}
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[1200px] h-[1200px] rounded-full"
+        style={{
+          background:
+            "radial-gradient(closest-side, rgba(199,36,177,0.25), transparent 60%), radial-gradient(closest-side, rgba(123,63,228,0.25), transparent 60%)",
+          mixBlendMode: "screen",
+        }}
+        animate={{ scale: [0.9, 1.05, 0.9], opacity: [0.5, 0.7, 0.5] }}
+        transition={{ duration: 6, ease: "easeInOut", repeat: Infinity }}
+      />
+
+      <div className="relative max-w-7xl mx-auto px-6 py-10 grid gap-10 md:grid-cols-3">
         {/* BRAND + ABOUT */}
         <div>
           <a
@@ -45,8 +59,8 @@ export default function Footer() {
           </h4>
           <ul className="mt-3 space-y-2 text-gray-300">
             <li>
-              <a href="mailto:locasanta51@gmail.com" className="hover:text-fuchsia-300">
-                locasanta51@gmail.com
+              <a href="mailto:info@santalocaevents.com" className="hover:text-fuchsia-300">
+                info@santalocaevents.com
               </a>
             </li>
             <li>
@@ -60,28 +74,32 @@ export default function Footer() {
             Follow
           </h4>
           <div className="mt-3 flex items-center gap-5">
-            <a
+            <motion.a
               href="https://www.instagram.com/santalocaevents/"
               target="_blank"
               rel="noreferrer"
-              className="transition-transform hover:scale-110 hover:text-fuchsia-300"
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.95 }}
+              className="hover:text-fuchsia-300"
             >
               <Instagram size={20} />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href="https://www.fatsoma.com/p/santa-loca"
               target="_blank"
               rel="noreferrer"
-              className="transition-transform hover:scale-110 hover:text-fuchsia-300"
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.95 }}
+              className="hover:text-fuchsia-300"
             >
               <ExternalLink size={20} />
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>
 
       {/* BOTTOM STRIP */}
-      <div className="border-t border-white/10">
+      <div className="relative border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 text-xs text-gray-500 flex flex-col sm:flex-row gap-2 sm:gap-6 justify-between">
           <span>Built by Reneksites.co.uk</span>
           <span className="text-fuchsia-400 font-semibold">Made for the night.</span>

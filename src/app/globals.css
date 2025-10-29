@@ -161,3 +161,4 @@ body {
 /* (optional) tiny glitch helper – unchanged behaviour */
 @keyframes sl-glitch{0%{transform:translate(2px,2px)}25%{transform:translate(-2px,-2px)}50%{transform:translate(-2px,2px)}75%{transform:translate(2px,-2px)}100%{transform:translate(2px,2px)}}
 .sl-glitch{ animation: sl-glitch .3s infinite; }
+

@@ -25,7 +25,7 @@ export default function Navbar() {
         >
           {/* Replace with your own file e.g. /logo.png */}
           <img
-            src="/logo2.png"
+            src="/logo2.PNG"
             alt="Santa Loca Logo"
             className="h-8 w-8 object-contain"
           />
