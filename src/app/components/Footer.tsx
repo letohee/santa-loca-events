@@ -1,14 +1,90 @@
 "use client";
-import { BRAND } from "@/lib/site";
+
+import { Instagram, MessageCircle, ExternalLink } from "lucide-react";
+
+const BRAND_NAME = "Santa Loca Events";
 
 export default function Footer() {
   return (
-    <footer className="py-10 border-t border-white/10" style={{ background: "#0a0a0a" }}>
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-gray-400 text-sm">© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</p>
-        <div className="flex items-center gap-4 text-sm">
-          <a href="/privacy" className="underline text-gray-400 hover:text-gray-200">Privacy Policy</a>
-          <a href="/terms" className="underline text-gray-400 hover:text-gray-200">Terms & Conditions</a>
+    <footer className="bg-black border-t border-white/10 text-gray-300">
+      <div className="max-w-7xl mx-auto px-6 py-10 grid gap-10 md:grid-cols-3">
+        {/* BRAND + ABOUT */}
+        <div>
+          <a
+            href="#top"
+            className="inline-block text-2xl font-extrabold bg-gradient-to-r from-fuchsia-500 via-purple-400 to-blue-400 bg-clip-text text-transparent"
+          >
+            Santa Loca
+          </a>
+          <p className="mt-3 text-gray-400">
+            Club nights, DJs & unforgettable experiences. Join us on the dance floor.
+          </p>
+          <p className="mt-4 text-sm text-gray-500">
+            © {new Date().getFullYear()} {BRAND_NAME}. All rights reserved.
+          </p>
+        </div>
+
+        {/* QUICK LINKS */}
+        <div>
+          <h4 className="text-fuchsia-400 font-semibold tracking-wide uppercase">
+            Explore
+          </h4>
+          <ul className="mt-3 space-y-2 text-gray-300">
+            <li><a href="#events" className="hover:text-fuchsia-300">Events</a></li>
+            <li><a href="#merch" className="hover:text-fuchsia-300">Merch</a></li>
+            <li><a href="#gallery" className="hover:text-fuchsia-300">Gallery</a></li>
+            <li><a href="/privacy" className="hover:text-fuchsia-300">Privacy Policy</a></li>
+            <li><a href="/terms" className="hover:text-fuchsia-300">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        {/* CONTACT + SOCIALS */}
+        <div>
+          <h4 className="text-fuchsia-400 font-semibold tracking-wide uppercase">
+            Connect
+          </h4>
+          <ul className="mt-3 space-y-2 text-gray-300">
+            <li>
+              <a href="mailto:locasanta51@gmail.com" className="hover:text-fuchsia-300">
+                locasanta51@gmail.com
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-fuchsia-300">
+                <MessageCircle size={16} /> WhatsApp
+              </a>
+            </li>
+          </ul>
+
+          <h4 className="mt-6 text-fuchsia-400 font-semibold tracking-wide uppercase">
+            Follow
+          </h4>
+          <div className="mt-3 flex items-center gap-5">
+            <a
+              href="https://www.instagram.com/santalocaevents/"
+              target="_blank"
+              rel="noreferrer"
+              className="transition-transform hover:scale-110 hover:text-fuchsia-300"
+            >
+              <Instagram size={20} />
+            </a>
+            <a
+              href="https://www.fatsoma.com/p/santa-loca"
+              target="_blank"
+              rel="noreferrer"
+              className="transition-transform hover:scale-110 hover:text-fuchsia-300"
+            >
+              <ExternalLink size={20} />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* BOTTOM STRIP */}
+      <div className="border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-6 py-4 text-xs text-gray-500 flex flex-col sm:flex-row gap-2 sm:gap-6 justify-between">
+          <span>Built by Reneksites.co.uk</span>
+          <span className="text-fuchsia-400 font-semibold">Made for the night.</span>
         </div>
       </div>
     </footer>

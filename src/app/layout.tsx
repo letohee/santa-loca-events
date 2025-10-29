@@ -1,23 +1,21 @@
 import localFont from "next/font/local";
 import "./globals.css";
 
-const agamtoh = localFont({
-  src: "./fonts/Agamtoh.ttf",
-  display: "swap",
-  // optional: weight: "400", style: "normal"
-});
-
-const xirod = localFont({
-  src: "./fonts/Xirod.otf",
-  variable: "--font-xirod",   // we’ll use this one via CSS var
+const uniSans = localFont({
+  src: [
+    { path: "./fonts/Uni Sans Heavy.otf", weight: "700", style: "normal" },
+    { path: "./fonts/Uni Sans Heavy Italic.otf", weight: "700", style: "italic" },
+    { path: "./fonts/Uni Sans Thin.otf", weight: "300", style: "normal" },
+    { path: "./fonts/Uni Sans Thin Italic.otf", weight: "300", style: "italic" },
+  ],
+  variable: "--font-uni-sans",
   display: "swap",
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      {/* 👇 this applies Agamtoh everywhere by default */}
-      <body className={`${agamtoh.className} ${xirod.variable}`}>
+      <body className={`${uniSans.variable} font-sans`}>
         {children}
       </body>
     </html>

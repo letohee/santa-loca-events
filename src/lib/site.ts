@@ -1,9 +1,11 @@
 export const BRAND = {
-  name: "Santa Loca Events",
-  accent: "#ff2a2a",
-  darkBg: "#0a0a0a",
-  lightText: "#f3f4f6",
+  darkBg: "#0A0014",
+  lightText: "#FFFFFF",
+  accent: "#C724B1", // vibrant fuchsia
+  secondary: "#7B3FE4", // disco purple
+  gradient: "linear-gradient(90deg, #7B3FE4 0%, #C724B1 100%)",
 };
+
 
 export const FATSOMA = {
   promoterUrl: "https://www.fatsoma.com/p/santa-loca",
@@ -19,3 +21,4 @@ export const SOCIALS = {
 // TEMP next event (update later)
 export const NEXT_EVENT_DATE = "2025-11-15T22:00:00+00:00"; // <- update
   
+export const BRAND_NAME = "Santa Loca Events";

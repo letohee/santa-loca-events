@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 
 const EMBED_SRC =
   process.env.NEXT_PUBLIC_FATSOMA_EMBED ??
-  "https://www.fatsoma.com/p/santa-loca/posts"; // fallback
+  "https://www.fatsoma.com/embed/p/santa-loca/events"; // fallback
 
 export default function EventsEmbed() {
   return (
