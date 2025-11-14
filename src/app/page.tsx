@@ -5,7 +5,7 @@ import Navbar from "@/app/components/Navbar";
 import Hero from "@/app/components/Hero";
 import NextEvent from "@/app/components/NextEvent";
 import EventsEmbed from "@/app/components/EventsEmbed";
-import MerchCTA from "@/app/components/MerchCTA";
+import MerchCTA from "@/app/shop/page";
 import InstagramFeed from "@/app/components/InstagramFeed";
 import About from "@/app/components/About";
 import Contact from "@/app/components/Contact";

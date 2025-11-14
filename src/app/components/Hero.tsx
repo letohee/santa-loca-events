@@ -74,31 +74,33 @@ export default function Hero() {
         </FadeIn>
 
         {/* CTAs */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <motion.a
-            href="#events"
-            whileHover={{ scale: 1.06 }}
-            whileTap={{ scale: 0.98 }}
-            className="rounded-full px-8 py-3 font-semibold text-light 
-                       bg-gradient-to-r from-fuchsia-500 via-purple-500 to-blue-400
-                       shadow-[0_0_22px_rgba(199,36,177,0.35)]
-                       hover:shadow-[0_0_34px_rgba(199,36,177,0.55)]
-                       transition-all"
-          >
-            Get Tickets
-          </motion.a>
+  <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+  <motion.div whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.98 }}>
+    <a
+      href="#events"
+      className="rounded-full px-8 py-3 font-semibold text-light
+                 bg-gradient-to-r from-fuchsia-500 via-purple-500 to-blue-400
+                 shadow-[0_0_24px_rgba(199,36,177,0.35)]
+                 hover:shadow-[0_0_36px_rgba(199,36,177,0.55)]
+                 transition-all"
+    >
+      Get Tickets
+    </a>
+  </motion.div>
 
-          <motion.a
-            href="#merch"
-            whileHover={{ scale: 1.06 }}
-            whileTap={{ scale: 0.98 }}
-            className="rounded-full px-8 py-3 border border-white/20 text-light/90 
-                       backdrop-blur-sm hover:bg-white/10 transition-all
-                       shadow-[0_0_16px_rgba(255,255,255,0.08)]"
-          >
-            Shop Merch
-          </motion.a>
-        </div>
+  <motion.div whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.98 }}>
+    <a
+      href="#merch"
+      className="rounded-full px-8 py-3 font-semibold text-light
+                 border border-white/25 backdrop-blur-[2px]
+                 hover:bg-white/10 hover:border-white/40
+                 transition-all"
+    >
+      Shop Merch
+    </a>
+  </motion.div>
+</div>
+
       </div>
     </section>
   );
