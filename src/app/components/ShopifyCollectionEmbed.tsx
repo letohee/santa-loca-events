@@ -52,7 +52,6 @@ export default function ShopifyCollectionEmbed() {
       window.ShopifyBuy.UI.onReady(client).then((ui) => {
         if (!containerRef.current || cancelled) return;
 
-        // clear in case of fast refresh
         containerRef.current.innerHTML = "";
 
         ui.createComponent("collection", {
@@ -76,7 +75,7 @@ export default function ShopifyCollectionEmbed() {
                   color: "#fff",
                 },
                 title: { color: "#fff", "font-weight": "700" },
-                price: { color: "#f0abfc" }, // fuchsia
+                price: { color: "#f0abfc" },
                 button: {
                   "background-image":
                     "linear-gradient(90deg,#C724B1,#7B3FE4,#00D4FF)",
@@ -94,6 +93,7 @@ export default function ShopifyCollectionEmbed() {
                   "@media (min-width: 601px)": {
                     "margin-left": "-20px",
                   },
+                  "grid-gap": "16px",
                 },
               },
             },
@@ -111,7 +111,7 @@ export default function ShopifyCollectionEmbed() {
                     "margin-left": "0px",
                     "margin-bottom": "0px",
                   },
-                  "background-color": "#111",
+                  "background-color": "#050011",
                   color: "#fff",
                 },
                 button: {
@@ -126,8 +126,65 @@ export default function ShopifyCollectionEmbed() {
             cart: {
               styles: {
                 cart: {
-                  "background-color": "#0f0f10",
-                  color: "#fff",
+                  "background-color": "#060019", // deep purple, matches site
+                  color: "#f9fafb",
+                  "border-left": "1px solid rgba(255,255,255,0.08)",
+                  "box-shadow": "-12px 0 40px rgba(0,0,0,0.7)",
+                },
+                header: {
+                  "border-bottom": "1px solid rgba(255,255,255,0.08)",
+                  "background-color": "#060019",
+                  color: "#e5e7eb",
+                },
+                title: {
+                  color: "#f9fafb",
+                  "font-weight": "700",
+                },
+                lineItems: {
+                  color: "#e5e7eb",
+                },
+                footer: {
+                  "background-color": "#060019",
+                  "border-top": "1px solid rgba(255,255,255,0.08)",
+                },
+                subtotalText: {
+                  color: "#e5e7eb", // "Subtotal" label
+                  "font-size": "13px",
+                  "letter-spacing": "0.06em",
+                },
+                subtotal: {
+                  color: "#ffffff", // £ value
+                  "font-weight": "700",
+                },
+                notice: {
+                  color: "#9ca3af",
+                },
+                currency: {
+                  color: "#e5e7eb",
+                },
+                close: {
+                  color: "#f9fafb",
+                },
+                empty: {
+                  color: "#e5e7eb",
+                },
+                // quantity controls
+                quantityIncrement: {
+                  "background-color": "#111322",
+                  color: "#f9fafb",
+                  border: "1px solid rgba(255,255,255,0.25)",
+                  "border-radius": "4px",
+                },
+                quantityDecrement: {
+                  "background-color": "#111322",
+                  color: "#f9fafb",
+                  border: "1px solid rgba(255,255,255,0.25)",
+                  "border-radius": "4px",
+                },
+                quantityInput: {
+                  "background-color": "#050011",
+                  color: "#f9fafb",
+                  border: "1px solid rgba(255,255,255,0.25)",
                 },
                 button: {
                   "background-image":
@@ -137,7 +194,10 @@ export default function ShopifyCollectionEmbed() {
                   "font-weight": "700",
                 },
               },
-              text: { total: "Subtotal", button: "Checkout" },
+              text: {
+                total: "Subtotal",
+                button: "Checkout",
+              },
             },
             toggle: {
               styles: {
@@ -154,7 +214,6 @@ export default function ShopifyCollectionEmbed() {
       });
     }
 
-    // load SDK if needed
     if (window.ShopifyBuy && window.ShopifyBuy.UI) {
       initShopifyBuy();
     } else {

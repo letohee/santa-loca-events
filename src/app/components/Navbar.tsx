@@ -9,7 +9,7 @@ export default function Navbar() {
   const links = [
     { label: "Home", href: "#top" },
     { label: "Events", href: "#events" },
-    { label: "Merch", href: "#merch" },
+    { label: "Shop", href: "#merch" },
     { label: "Gallery", href: "#gallery" },
     { label: "About", href: "#about" },
     { label: "Contact", href: "#contact" },

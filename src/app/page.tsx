@@ -1,29 +1,38 @@
-"use client";
-
+// src/app/page.tsx
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import NextEvent from "./components/NextEvent";
+import EventsEmbed from "./components/EventsEmbed";
+import MerchCTA from "./components/MerchCTA";
+import InstagramFeed from "./components/InstagramFeed";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import NewsletterModal from "./components/NewsletterModal";
 import { BRAND } from "@/lib/site";
-import Navbar from "@/app/components/Navbar";
-import Hero from "@/app/components/Hero";
-import NextEvent from "@/app/components/NextEvent";
-import EventsEmbed from "@/app/components/EventsEmbed";
-import MerchCTA from "@/app/shop/page";
-import InstagramFeed from "@/app/components/InstagramFeed";
-import About from "@/app/components/About";
-import Contact from "@/app/components/Contact";
-import Footer from "@/app/components/Footer";
-import NewsletterModal from "@/app/components/NewsletterModal";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className="min-h-screen" style={{ background: BRAND.darkBg, color: BRAND.lightText }}>
+    <main
+      className="min-h-screen text-gray-100"
+      style={{ background: BRAND.darkBg }}
+    >
+      {/* fixed navbar on top */}
       <Navbar />
-      <Hero />
-      <NextEvent />
-      <EventsEmbed />
-      <MerchCTA />
-      <InstagramFeed />
-      <About />
-      <Contact />
-      <Footer />
+
+      {/* push content below the fixed navbar */}
+      <div className="pt-20 md:pt-24">
+        <Hero />
+        <NextEvent />
+        <EventsEmbed />
+        <MerchCTA />          {/* <-- this has id="merch" inside */}
+        <InstagramFeed />
+        <About />
+        <Contact />
+        <Footer />
+      </div>
+
+      {/* newsletter pop-up */}
       <NewsletterModal />
     </main>
   );
